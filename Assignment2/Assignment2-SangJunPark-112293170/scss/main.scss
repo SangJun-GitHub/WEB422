@@ -1,0 +1,51 @@
+@import 'reset';
+
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+nav {
+    ul {
+      margin: 0px;
+      padding: 0;
+      list-style: none;
+    }
+  
+    li { display: inline-block; }
+  
+    a {
+      display: block;
+      padding: 6px 12px;
+      text-decoration: none;
+    }
+  }
+
+  @mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+  }
+
+  .modal-content { @include border-radius(10px); }
+
+  .modal-title {
+    border: 5px ;
+    padding: 10px;
+    font-size: 3em;
+    color: #333;
+  }
+  .modal-body {
+    border: 5px ;
+    padding: 20px;
+    font-size: 2em;
+    color: #333;
+  }
+
+  .container { width: 100%; }
+
+
